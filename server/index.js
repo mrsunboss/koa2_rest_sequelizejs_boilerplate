@@ -5,8 +5,12 @@ import Models from './models';
 import bootstrap from './bootstrap';
 import Controllers from './controllers/index.js';
 import config from './config/init';
+import bodyParser from 'koa-bodyparser'
+
 
 let app = new Koa();
+app.use(bodyParser());
+
 
 
 
