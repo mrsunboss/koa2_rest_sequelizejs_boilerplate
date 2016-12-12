@@ -5,11 +5,11 @@ import Models from './models';
 import bootstrap from './bootstrap';
 import Controllers from './controllers/index.js';
 import config from './config/init';
-import bodyParser from 'koa-bodyparser'
+import koaBetterBody from 'koa-better-body'
 
 
 let app = new Koa();
-app.use(bodyParser());
+app.use(koaBetterBody());
 
 
 
