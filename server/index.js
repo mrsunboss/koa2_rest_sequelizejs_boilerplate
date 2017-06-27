@@ -8,6 +8,7 @@ import config from './config/init';
 import koaBetterBody from 'koa-better-body'
 
 
+const env = process.env.NODE_ENV || 'development';
 let app = new Koa();
 app.use(koaBetterBody());
 
@@ -30,8 +31,10 @@ const liftApp = async () => {
 
   //監聽的 port
   app.listen(config.port);
+
   return app;
 
 }
 
-liftApp();
+if (env !== 'test') liftApp();
+module.exports = liftApp
