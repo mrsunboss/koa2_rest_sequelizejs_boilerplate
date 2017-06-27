@@ -4,7 +4,7 @@ export default async (cb) => {
 
 
   let User = {
-    name:'rick'
+    name:'rick2'
   }
 
 
